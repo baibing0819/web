@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formtest</title>
+</head>
+<body>
+<!--    >>>>>>>>>>>>Button>>>>>>>>>>>>>>>>-->
+    <input type="button" value="按钮">
+    <button>按钮2</button>   <!--js合作并且作为绑定事件，与上一行的button有所区别-->
+    <input type="submit" value="提交">     <!--提交表单-->
+
+<!--    数字滚动轴-->
+    <input type="range" min="0" max="100" step="2">
+    <br>
+    <input type="range" min="0" max="100" step="2" value="0">  <!--value为初始值-->
+<!--手动输入数字-->
+    <input type="number" min="0" max="100" value="0">
+<!--checkbox-->
+    <input type="checkbox" >选择   <!--这里的box说明需放在外面-->
+    <br>
+<!--radao checked 表示默认选择  name必须一致，以达到只能同时选择一项的效果-->
+    <input type="radio" name="a" checked>bai
+    <input type="radio" name="a">z=jin
+    <input type="radio" name="a">lei
+    <br>
+<!--select-->
+    你最喜欢的球员：
+    <select>
+        <option>kobe</option>
+        <option>james</option>
+        <option>curry</option>
+    </select>
+    <br>
+
+<!--datalist 可自己输入内容 list的属性与id一致且要与text配合使用，用list属性引导datalist-->
+    你最喜欢的球员是：
+    <input type="text" list="datalist1">
+    <datalist id="datalist1">
+        <option>kobe</option>
+        <option>james</option>
+        <option>curry</option>
+    </datalist>
+<!--用于提交表单的特殊文本，方便获取判断文本是否正确-->
+    <br>
+    <input type="email">
+    <input type="tel">
+    <input type="url">
+    <br>
+    <input type="date">    <!--获取时间-->
+    <input type="color">
+    <input type="search">
+
+    <input type="hidden" value="123">       <!--隐藏文本框-->
+    <br>
+<!--图片按钮-->
+    <input type="image" src="star.jpg" width="80px">
+    <br>
+<!--上传文件-->
+    <input type="file" multiple>    <!--multiple属性用于可上传多个文件-->
+
+</body>
+</html>

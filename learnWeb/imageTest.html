@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建图片</title>
+</head>
+<body>
+<!--创建表单加入图片，可用来查看图片的像素点坐标-->
+<form>
+    <input type="image" src="time.jpg">
+</form>
+<br>
+<!--分区响应图-->
+    <img src="time.jpg" usemap="#map1" alt="下载" >  <!-- #表示应用-->
+    <map name="map1">
+        <area href="videotest.html" shape="rect" coords="18,3,159,155" target="_self"> <!--坐标左上、右下-->
+        <area href="https://www.google.com/" shape="rect" coords="167,3,330,155" target="_blank">
+        <area href="table&list.html" shape="rect" coords="334,3,488,155" target="_blank">
+        <area href="https://baibing0819.github.io" shape="circle" coords="415,243,52" target="_blank"> <!--(x,y,r)-->
+    </map>
+
+</body>
+</html>

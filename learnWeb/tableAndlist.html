@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table and list</title>
+</head>
+<body>
+<table border="1px">
+    <thead>
+        <tr>           <!-- table row-->
+            <th>姓名</th>             <!-- table head-->
+            <th>身份</th>
+            <th>是否在逃</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>金艺真</td>            <!-- table data-->
+            <td>嫌疑犯</td>
+            <td>是</td>
+        </tr>
+    </tbody>
+
+    <tbody>
+    <tr>
+        <td>白冰</td>
+        <td>优秀引进人才</td>
+        <td>否</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td>xx</td>
+            <td>优秀引进人才</td>
+            <td>否</td>
+        </tr>
+    </tfoot>
+
+
+
+    <table border="2px">
+        <thead>
+        <tr>           <!-- table row-->
+            <th>姓名</th>             <!-- table head-->
+            <th>身份</th>
+            <th>是否在逃</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>金艺真</td>            <!-- table data-->
+            <td>嫌疑犯</td>
+            <td>是</td>
+        </tr>
+        </tbody>
+
+        <tbody>
+        <tr>
+            <td rowspan="2">白冰</td>         <!-- 行合并-->
+            <td>优秀引进人才</td>
+            <td>否</td>
+        </tr>
+
+        <tr>
+
+            <td>优秀引进人才</td>
+            <td>否</td>
+        </tr>
+
+        <tr>
+            <td>xx</td>
+            <td colspan="2">优秀引进人才</td>     <!-- 列合并 -->
+
+        </tr>
+
+        <tr>
+            <td>xx</td>
+            <td>优秀引进人才</td>
+            <td>否</td>
+        </tr>
+
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td>xx</td>
+            <td>优秀引进人才</td>
+            <td>否</td>
+        </tr>
+        </tfoot>
+
+        </tr>
+    </table>
+</table>
+
+
+<!-- list test-->
+<ol>                <!-- ordered list-->
+    <li>目录：</li>
+    <ol type="a">
+        <li>第一章：</li>
+        <ol>
+            <li>aaaa</li>
+            <li>bbbb</li>
+        </ol>
+
+        <li>第二章：</li>
+        <ol>
+            <li>bbdb</li>
+            <li>hdhh</li>
+        </ol>
+    </ol>
+</ol>
+
+<ul>
+    <li>你好</li>
+    <li>你好呀</li>
+    <li>你好个锤子</li>
+</ul>
+
+</body>
+</html>
