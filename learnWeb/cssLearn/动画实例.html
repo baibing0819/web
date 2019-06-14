@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画实例</title>
+    <style type="text/css">
+        .div{
+            text-align: center;
+        }
+        .img{
+            margin-top: 250px;
+            width: 600px;      /* 这里图片成比例缩放，动画才会流畅，否则会有突变效果*/
+            height: 400px;
+        }
+        html:hover .img{
+            animation-name: war;
+            animation-delay: 500ms;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;   /* 动画停止到最后一帧而不是最初的模样*/
+        }
+        h1{
+            font-family: Elephant;
+            font-size: 30px;
+                text-shadow: 1px 1px 8px #8654ff;    /*水平偏移、垂直偏移、模糊程度、颜色*/
+        }
+        html:hover h1{
+            font-family: Elephant;
+            transition-delay: 500ms;
+            transition-duration: 1s;
+            font-size: 10px;
+            text-shadow: 1px 1px 20px #8654ff;    /*水平偏移、垂直偏移、模糊程度、颜色*/
+        }
+        @keyframes war {
+            to{
+                height: 40px;
+                width: 60px;
+                margin-top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <img class="img" src="code1.jpg">
+        <h1>Go Warriors</h1>
+    </div>
+</body>
+</html>

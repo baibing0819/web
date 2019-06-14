@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建动画</title>
+    <style type="text/css">
+        .class1 {
+            width: 100px;
+            height: 100px;
+            background-color: #c6ff3c;
+        }
+        .class1:hover {
+            animation-duration: 1000ms;
+            animation-delay: 150ms;
+            animation-name: hello;      /*名字用于下面动画的引导*/
+            animation-iteration-count: 2;    /*动画次数，配合下面的方向属性，单方向为一次*/
+            animation-direction: alternate;         /*正反方向轮流*/
+        }
+        @keyframes hello {      /*设置动画效果*/
+            from {
+                width: 120px;
+                height: 120px;
+                background-color: #e3ff36;
+            }
+            50% {
+                width: 150px;
+                height: 150px;
+                background-color: #fff149  ;
+            }
+            75% {
+                width: 150px;
+                height: 150px;
+                background-color: #ffc741;
+            }
+            to {
+                width: 200px;
+                height: 200px;
+                background-color: #ff8038;
+            }
+        }
+    </style>
+</head>
+<body>
+<p class="class1">hello</p>
+</body>
+</html>

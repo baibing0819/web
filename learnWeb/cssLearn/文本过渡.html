@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本过渡</title>
+    <style type="text/css">
+        .class1 {
+            height: 80px;
+            width: 80px;
+            background-color: #fcff66;
+        }
+        .class1:hover {         /*过渡*/
+            height: 200px;
+            width: 200px;
+            background-color: #ff9d56;
+            transition-delay: 150ms;        /*变化时间*/
+            transition-duration: 1000ms;         /*变化过程需多久时间*/
+            transition-property: background-color,width;    /*想要此效果的属性*/
+            transition-timing-function: ease-in;   /*贝塞尔曲线形式变化，ease-in表示开始慢，后面快*/
+        }
+    </style>
+</head>
+<body>
+<p class="class1">hello</p>
+</body>
+</html>

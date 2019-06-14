@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本变换</title>
+    <style type="text/css">
+        .class1 {
+            height: 80px;
+            width: 80px;
+            background-color: #fcff66;
+        }
+        .class1:hover {         /*过渡*/
+            height: 80px;
+            width: 80px;
+            background-color: #fcff66;
+            transform: rotate(45deg);          /* 选取旋转角度*/
+            transform-origin: top right;        /*选取旋转中心，距离左上的距离*/
+            /*transform: scale(1.5);*/          /*选取放大比例*/
+        }
+    </style>
+</head>
+<body>
+<p class="class1">hello</p>
+</body>
+</html>
