@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="height: 100px; background-color: yellow">
+    <button onclick="func()">跳主页</button>
+
+    <script type="text/javascript">
+        function func() {
+            window.history.go(-2)   //往回走两个页面
+        }
+
+        console.log(window.history.length)
+    </script>
+
+</body>
+</html>

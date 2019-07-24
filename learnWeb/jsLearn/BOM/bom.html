@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title2</title>
+    <script src="bom.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body style="height: 3000px;">
+    ice bai
+    <button onclick="func()">red</button>
+    <button onclick="func1()">button1</button>
+    <button onclick="func2()">button2</button>
+    <br>
+    <script type="text/javascript">
+        window.onresize = function(){       //实时获取窗体的高度、宽度
+            w = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth
+            h = document.documentElement.clientHeight || document.body.clientHeight || window.innerHeight
+            console.log(w,h)
+        }
+
+        window.onscroll = function(){
+            console.log("发生了滚动")
+            var h = document.documentElement.scrollTop || document.body.scrollTop
+            console.log(h)          //实时获取滚动条高度
+        }
+
+        //当页面完全加载成功出发该事件
+        window.onload = function(){
+            alert("页面加载成功，瞅你咋的？")   //可以看出先执行下面的提示，加载完毕才执行到这里
+        }
+
+        // window.onunload() //IE支持
+        alert("你瞅啥？")
+    </script>
+</body>
+</html>

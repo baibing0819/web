@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <input type="text" name="in" id="put"/>
+    <a href="事件流.html" id="link">点我跳转</a>
+
+    <script type="text/javascript">
+        
+        document.body.onclick = function () {
+            this.style.backgroundColor = "yellow"
+        }
+        
+        document.getElementById("box").onclick = function (e) {
+            var ev = e || window.event
+            ev.stopPropagation()        //阻止事件流冒泡阶段发生，这样当点击box时，外部窗口就不会变色
+            this.style.backgroundColor = "blue"
+        }
+
+        document.getElementById("put").onclick = function (e) {
+            var ev = e || window.event
+            ev.stopPropagation()
+        }
+
+        document.getElementById("link").onclick = function (e) {
+            var ev = e || window.event
+            ev.stopPropagation()
+
+            var info = window.confirm("您浏览的页面存在风险，是否继续？")
+            if (info == false){
+                //阻止跳转
+                ev.preventDefault()
+            }
+        }
+    </script>
+</body>
+</html>

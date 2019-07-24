@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body style="height: 1000px; position: relative">
+    <div id="box">
+
+    </div>
+
+    <button onclick="fly()" style="position: absolute ; left: 200px; top: 200px;">走你</button>
+
+    <script type="text/javascript">
+        var div = document.getElementById("box")
+
+        function fly() {
+            setInterval(function () {
+                //获取实时位置
+                var a = parseInt(window.getComputedStyle(div,null).left)  //将 str “××px×  转换成数字
+                var b = parseInt(window.getComputedStyle(div,null).top)
+
+                div.style.left = a + 10 + "px"
+                div.style.top = a + 10 + "px"
+            },300)
+        }
+    </script>
+</body>
+</html>

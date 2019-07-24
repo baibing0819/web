@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="../jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //DOM对象
+            var jsDiv = document.getElementById("box")
+
+            //jquery包装对象
+            var $jsDiv = $("#box").html("23333....")
+
+            //jq 转换成 dom
+            var jsDiv1 = $jsDiv[0]
+            console.log($jsDiv)
+            console.log(jsDiv1)
+            console.log(jsDiv)
+
+            //转换方法二
+            var jsDiv2 = $jsDiv.get(0)
+            console.log(jsDiv2)
+
+            //============dom转换成jq=================
+            $jqDiv3 = $(jsDiv)
+        })
+
+    </script>
+</body>
+</html>

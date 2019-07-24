@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取属性节点</title>
+</head>
+<body>
+    <button onclick="func()">press</button>
+    <button onclick="func1()">press1</button>
+    <input type="text" id="in" placeholder="请留下你的名字" my="我的" >
+
+    <script type="text/javascript">
+        var jsInput = document.getElementById("in")
+        //方法一：获取官方定义的属性节点
+        console.log(jsInput.placeholder)
+
+        //修改属性节点
+        function func() {
+            jsInput.placeholder = "ice bai "
+            console.log(jsInput.placeholder)
+        }
+
+        //方法二：可以获取自定义标签
+        console.log(jsInput.getAttribute("my"))
+        //对应的修改属性方法
+        function func1() {
+            jsInput.setAttribute("my","ice")
+            console.log(jsInput)
+        }
+
+        //移除属性
+        // jsInput.removeAttribute("placeholder")
+
+        //增加属性
+        jsInput.setAttribute("newAttr","good")
+    </script>
+</body>
+</html>

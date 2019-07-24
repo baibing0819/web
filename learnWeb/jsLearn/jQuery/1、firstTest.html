@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        /*document可以有多个且加载速度快，onload只能有一个*/
+        $(document).ready(function () {
+            alert("这是第三个执行的")
+        })
+
+        $(document).ready(function () {
+            alert("这是第四个执行的")
+        })
+
+        window.onload = function(){
+            alert("这是第二个执行的")
+        }
+
+        alert("这是第一个执行的")
+    </script>
+
+</body>
+</html>

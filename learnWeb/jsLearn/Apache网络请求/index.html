@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+    <button id="btn">按钮</button>
+
+    <script type="text/javascript">
+        $("btn").bind("click",function () {
+            $.ajax({type:"get",         //发起请求,访问服务器指定url
+                    url:"",
+                    async:true,
+                    data:{a:1,b:2},
+                    dataType:"json",
+                    success: function (data,textStatus) {
+                        console.log("ready")
+                    }
+                    //处理接收到的数据
+                    // var d = data[""][""]          //获取对应文件中的数据
+                })
+    </script>
+
+</body>
+</html>

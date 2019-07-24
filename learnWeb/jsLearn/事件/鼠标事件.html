@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="div1" style="width: 100px; height: 100px; background-color: red"></div>
+
+   <ul>
+       <li>鼠标进入变红色</li>
+       <li>鼠标离开变蓝色</li>
+       <li>鼠标按下字体大2倍</li>
+       <li>鼠标抬起字体小2倍</li>
+   </ul>
+
+    <script type="text/javascript">
+
+        var d = document.getElementById("div1")
+
+        var time
+
+        d.addEventListener("click",function () {
+            clearTimeout(time)      //清除双击中的第一次单击
+
+            time = setTimeout(function () {     //300ms后执行
+                console.log("单击")
+            },300)
+        },false)
+
+        d.addEventListener("dblclick",function () {
+            clearTimeout(time)          //确认是双击，则屏蔽单击效果，清除第二次单击
+            console.log("双击")
+        },false)
+
+        //============鼠标事件=====================
+        var lis = document.getElementsByTagName("li")
+
+        for (var i = 0; i < lis.length;i++){
+            lis[i].addEventListener("mouseover",function () { //添加鼠标的四个事件
+                this.style.backgroundColor = "red"
+            },false)
+
+            lis[i].addEventListener("mouseout",function () {
+                this.style.backgroundColor = "blue"
+            },false)
+
+            lis[i].addEventListener("mousedown",function () {
+                this.style.fontSize = parseInt(getComputedStyle(this,null).fontSize)*2 + "px"
+            },false)
+
+            lis[i].addEventListener("mouseup",function () {
+                this.style.fontSize = parseInt(getComputedStyle(this,null).fontSize)/2 + "px"
+            },false)
+        }
+
+        document.addEventListener("mousemove",function () {
+            console.log("鼠标在移动")
+        },false)
+
+        //============键盘事件=====================
+        // document.addEventListener("keydown",function (e) {
+        //     var event = e || window.event           //不同浏览器
+        //     console.log(event)
+        //     console.log(event.altKey,event.ctrlKey,event.shiftKey,event.keyCode)
+        // },false)
+
+        // document.addEventListener("keyup",function (e) {    //键盘抬起
+        //     var event = e || window.event           //不同浏览器
+        //     console.log(event)
+        //     console.log(event.altKey,event.ctrlKey,event.shiftKey,event.keyCode)
+        // },false)
+
+        document.addEventListener("keypress",function (e) {    //键盘非功能按键触发
+            var event = e || window.event           //不同浏览器
+            console.log(event)
+            console.log(event.altKey,event.ctrlKey,event.shiftKey,event.keyCode)
+        },false)
+    </script>
+</body>
+</html>

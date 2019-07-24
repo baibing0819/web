@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">我是个盒子</div>
+
+    <script type="text/javascript">
+        var jsDiv = document.getElementById("box")
+
+        //方法一：获取文本节点，标签之间的内容
+        console.log(jsDiv.innerHTML)
+        //方法二：获取包括标签的文本内容,此方法还可以用来增加节点
+        console.log(jsDiv.outerHTML)
+        //方法三：获取文本节点，标签之间的内容
+        console.log(jsDiv.innerText)
+
+
+    </script>
+</body>
+</html>

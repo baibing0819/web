@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body style="height: 3000px ; position: relative">
+
+    <div id="box"></div>
+
+    <script type="text/javascript">
+
+        var div = document.getElementById("box")
+
+        basex = 0
+        basey = 0
+
+        movex = 0
+        movey = 0
+
+        div.addEventListener("mousedown",function (e) {
+
+            var ev = e || window.event
+
+            basex = ev.pageX
+            basey = ev.pageY
+
+            document.onmousemove = function (e) {
+                var e2 = e || window.event
+
+                movex = e2.pageX - basex
+                basex = e2.pageX
+                movey = e2.pageY - basey
+                basey = e2.pageY
+
+                div.style.left = div.offsetLeft + movex + "px"
+                div.style.top = div.offsetTop + movey + "px"
+            }
+        },false)
+
+        document.addEventListener("mouseup",function () {
+            document.onmousemove = null
+        },false)
+
+    </script>
+</body>
+</html>

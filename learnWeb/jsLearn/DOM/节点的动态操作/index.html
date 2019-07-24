@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点的动态操作</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body style="height: 3000px">
+    <div id="box1">
+        <p>1</p>
+        <p>2</p></div>
+
+    <div id="box2">
+
+    </div>
+
+    <div id="box3">
+
+    </div>
+
+    <input id="put" type="text" name="in" placeholder="ice bai is a nice man">
+
+    <script type="text/javascript">
+
+        var div = document.getElementById("box1")
+
+        var a = document.createElement("p")         //添加标签
+        a.innerHTML = "ice bai is a good man"       //添加元素节点属性
+        a.style.backgroundColor = "green"
+        console.log(a)
+
+        // div.appendChild(a)          //插入到指定位置，div标签的最后
+        // div.insertBefore(a,div.lastChild)   //插入到想要的子节点之前
+
+        div.replaceChild(a,div.lastChild)       //替换节点
+
+        var newDiv = div.cloneNode(true)        //克隆元素节点，为true时表示克隆包括他的子节点
+        console.log(newDiv)
+
+        div.removeChild(div.lastChild)      //删除节点
+
+        var i = document.createElement("input")
+        i.setAttribute("type","text")
+
+        document.getElementById("box1").appendChild(i)
+
+    </script>
+</body>
+</html>

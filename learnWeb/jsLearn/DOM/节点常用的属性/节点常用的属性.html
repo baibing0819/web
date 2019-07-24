@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点常用属性</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <div id="box1">
+        <p>我是第一个P</p>
+        <p>我是第二个P</p>
+        <p>我是第三个P</p>
+        <p>我是第四个P</p>
+    </div>
+
+    <div id="box2">
+
+    </div>
+
+    <div id="box3">
+
+    </div>
+
+    <input id="put" type="text" name="in" placeholder="ice bai is a nice man">
+
+    <script type="text/javascript">
+        // 节点类型    nodename    nodetype   nodevalue
+        // 元素节点    元素名称     1          null
+        // 属性节点    属性名称     2          属性值
+        // 文本节点    #text       3          文本内容不包括html
+        // 注释节点    #Document   6          注释内容
+        var jsDiv1 = document.getElementById("box1")
+        var jsDiv2 = document.getElementById("box2")
+        var jsDiv3 = document.getElementById("box3")
+        var jsInput = document.getElementById("put")
+
+        var s = jsInput.placeholder
+
+        //节点共有属性
+        console.log(jsDiv1.nodeName,jsDiv1.nodeType,jsDiv1.nodeValue)
+
+        //=========================节点层次关系===================================
+        //获取当前元素节点下的所有子节点
+        var allChild = jsDiv1.childNodes
+        //剔除文本节点  应用上面的nodetype
+
+        console.log(allChild)
+        //选取第一个子节点  同理还有 lastchild   ownerDocument  parentnode priviouSibling（同级节点）
+        console.log(jsDiv1.firstChild)
+
+        //获取当前节点所有的属性节点
+        console.log(jsInput.attributes)
+
+    </script>
+</body>
+</html>

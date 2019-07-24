@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行间样式表的读写</title>
+    <style type="text/css">
+        #box{
+            height: 200px;   /*非行间样式表属性，下面修改时相当于新创建该属性，而不是改变*/
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" style="width: 100px;  background-color: red"></div>
+
+    <button onclick="changeColor()">换颜色</button>
+
+    <script type="text/javascript">
+        var jsDiv = document.getElementById("box")
+
+        var jsDivStyle = jsDiv.style
+
+        function changeColor() {
+            //js的该属性对应的是css里的background-color属性
+            jsDiv.style.backgroundColor = "yellow"
+            jsDiv.style.width = "200px"
+            jsDiv.style.height = "300px"
+            jsDiv.style.left = "100px"
+        }
+    </script>
+</body>
+</html>
